@@ -8,32 +8,116 @@ All API requests require the use of a generated API key.  To authenticate an API
 # Admin
 
 <details>
- <summary><code>POST</code> <code><b>/</b></code> <code>(overwrites all in-memory stub and/or proxy-config)</code></summary>
+ <summary><code>POST</code> <code><b>/admin/createCompany</b></code> <code>(Create a company)</code></summary>
 
 ##### Parameters
 
-> | name      |  type     | data type               | description                                                           |
-> |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
-> | None      |  required | object (JSON or YAML)   | N/A  |
+> | name      |  type     | description                                                           |
+> |-----------|-----------|-----------------------------------------------------------------|
+> | company_name      |  string |  Required. Name of the company  |
 
 
 ##### Responses
 
 > | http code     | content-type                      | response                                                            |
 > |---------------|-----------------------------------|---------------------------------------------------------------------|
-> | `201`         | `text/plain;charset=UTF-8`        | `Configuration created successfully`                                |
+> | `201`         | `text/plain;charset=UTF-8`        | `Created successfully`                                |
 > | `400`         | `application/json`                | `{"code":"400","message":"Bad Request"}`                            |
-> | `405`         | `text/html;charset=utf-8`         | None                                                                |
-
-##### Example cURL
-
-> ```javascript
->  curl -X POST -H "Content-Type: application/json" --data @post.json http://localhost:8889/
-> ```
 
 </details>
+
+
+
+# Locations
+
+<details>
+    <summary><code>GET</code> <code><b>/location/{company_api_key}/get/{company_id}</b></code> <code>Get a location</code></summary>
+
+    ##### Parameters
+
+    | Parameter | Type | Description |
+    | :--- | :--- | :--- |
+    | `company_api_key` | `string` | **Required**. API Key of the company to authorize |
+    | `company_id` | `int` | **Required**. ID of the company |
+
+
+    ##### Responses
+
+    | http code     | content-type                      | response                                                            |
+    |---------------|-----------------------------------|---------------------------------------------------------------------|
+    | `201`         | `text/plain;charset=UTF-8`        | `Created successfully`                                |
+    | `400`         | `application/json`                | `{"code":"400","message":"Bad Request"}`                            |
+
+</details>
+
+<details>
+ <summary><code>GET</code> <code><b>/location/{company_api_key}/getAll/{company_id}</b></code> <code>Get all locations</code></summary>
+
+##### Parameters
+
+| Parameter | Type | Description |
+| :--- | :--- | :--- |
+| `company_api_key` | `string` | **Required**. API Key of the company to authorize |
+| `company_id` | `int` | **Required**. ID of the company |
+
+
+##### Responses
+
+ | http code     | content-type                      | response                                                            |
+ |---------------|-----------------------------------|---------------------------------------------------------------------|
+ | `201`         | `text/plain;charset=UTF-8`        | `Created successfully`                                |
+ | `400`         | `application/json`                | `{"code":"400","message":"Bad Request"}`                            |
+
+</details>
+
+
+
+<details>
+ <summary><code>PUT</code> <code><b>/location/{company_api_key}/modify/{company_id}</b></code> <code>Modify a locations</code></summary>
+
+##### Parameters
+
+| Parameter | Type | Description |
+| :--- | :--- | :--- |
+| `company_api_key` | `string` | **Required**. API Key of the company to authorize |
+| `company_id` | `int` | **Required**. ID of the company |
+
+
+##### Responses
+
+ | http code     | content-type                      | response                                                            |
+ |---------------|-----------------------------------|---------------------------------------------------------------------|
+ | `201`         | `text/plain;charset=UTF-8`        | `Created successfully`                                |
+ | `400`         | `application/json`                | `{"code":"400","message":"Bad Request"}`                            |
+
+</details>
+
+<details>
+ <summary><code>DELETE</code> <code><b>/location/{company_api_key}/delete/{company_id}</b></code> <code>Delete a locations</code></summary>
+
+##### Parameters
+
+| Parameter | Type | Description |
+| :--- | :--- | :--- |
+| `company_api_key` | `string` | **Required**. API Key of the company to authorize |
+| `company_id` | `int` | **Required**. ID of the company |
+
+
+##### Responses
+
+ | http code     | content-type                      | response                                                            |
+ |---------------|-----------------------------------|---------------------------------------------------------------------|
+ | `201`         | `text/plain;charset=UTF-8`        | `Created successfully`                                |
+ | `400`         | `application/json`                | `{"code":"400","message":"Bad Request"}`                            |
+
+</details>
+
+
+
+
+<!-- 
 ```http
-POST /admin/createCompany
+POST 
 ```
 
 | Parameter | Type | Description |
@@ -95,6 +179,6 @@ PUT /location/company_api_key/modify/company_id
 ## Delete one location
 ```http
 DELETE /location/company_api_key/modify/company_id
-```
+``` -->
 
 
