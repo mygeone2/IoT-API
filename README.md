@@ -1,4 +1,8 @@
+
+
 # Endpoints
+
+Endpint available at <code>http://34.176.187.55:3000/</code>
 
 ## Authorization
 
