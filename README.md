@@ -31,22 +31,22 @@ All API requests require the use of a generated API key.  To authenticate an API
 # Locations
 
 <details>
-    <summary><code>GET</code> <code><b>/location/{company_api_key}/get/{company_id}</b></code> <code>Get a location</code></summary>
+<summary><code>GET</code> <code><b>/location/{company_api_key}/get/{company_id}</b></code> <code>Get a location</code></summary>
 
-    ##### Parameters
+##### Parameters
 
-    | Parameter | Type | Description |
-    | :--- | :--- | :--- |
-    | `company_api_key` | `string` | **Required**. API Key of the company to authorize |
-    | `company_id` | `int` | **Required**. ID of the company |
+| Parameter | Type | Description |
+| :--- | :--- | :--- |
+| `company_api_key` | `string` | **Required**. API Key of the company to authorize |
+| `company_id` | `int` | **Required**. ID of the company |
 
 
-    ##### Responses
+##### Responses
 
-    | http code     | content-type                      | response                                                            |
-    |---------------|-----------------------------------|---------------------------------------------------------------------|
-    | `201`         | `text/plain;charset=UTF-8`        | `Created successfully`                                |
-    | `400`         | `application/json`                | `{"code":"400","message":"Bad Request"}`                            |
+| http code     | content-type                      | response                                                            |
+|---------------|-----------------------------------|---------------------------------------------------------------------|
+| `201`         | `text/plain;charset=UTF-8`        | `Created successfully`                                |
+| `400`         | `application/json`                | `{"code":"400","message":"Bad Request"}`                            |
 
 </details>
 
@@ -114,18 +114,12 @@ All API requests require the use of a generated API key.  To authenticate an API
 
 
 
+# Sensor
 
-<!-- 
-```http
-POST 
-```
+<details>
+ <summary><code>POST</code> <code><b>/sensor_data</b></code> <code>Insert a sensor data</code></summary>
 
-| Parameter | Type | Description |
-| :--- | :--- | :--- |
-| `company_name` | `string` | **Required**. Name of the company |
-
-# Locations
-## Parameters
+##### Parameters
 
 | Parameter | Type | Description |
 | :--- | :--- | :--- |
@@ -133,27 +127,20 @@ POST
 | `company_id` | `int` | **Required**. ID of the company |
 
 
-## Get all locations
-```http
-GET /location/company_api_key/getAll/company_id
-```
-## Get one location
-```http
-GET /location/company_api_key/get/company_id
-```
-## Modify one location
-```http
-PUT /location/company_api_key/modify/company_id
-```
+##### Responses
 
-## Delete one location
-```http
-DELETE /location/company_api_key/modify/company_id
-```
+ | http code     | content-type                      | response                                                            |
+ |---------------|-----------------------------------|---------------------------------------------------------------------|
+ | `201`         | `text/plain;charset=UTF-8`        | `Created successfully`                                |
+ | `400`         | `application/json`                | `{"code":"400","message":"Bad Request"}`                            |
+
+</details>
 
 
-# Sensor
-## Parameters
+<details>
+ <summary><code>GET</code> <code><b>/sensor_data/{company_api_key}/{from}/{to}/{array_sensors}</b></code> <code>Get sensors data</code></summary>
+
+##### Parameters 
 
 | Parameter | Type | Description |
 | :--- | :--- | :--- |
@@ -163,22 +150,13 @@ DELETE /location/company_api_key/modify/company_id
 | `array_sensor` | `int[]` | **Required**. Array of sensors id to get data|
 
 
-## Insert sensor data
-```http
-POST /sensor_data/
-```
-## Get one location
-```http
-GET /location/company_api_key/get/company_id
-```
-## Modify one location
-```http
-PUT /location/company_api_key/modify/company_id
-```
+##### Responses
 
-## Delete one location
-```http
-DELETE /location/company_api_key/modify/company_id
-``` -->
+ | http code     | content-type                      | response                                                            |
+ |---------------|-----------------------------------|---------------------------------------------------------------------|
+ | `201`         | `text/plain;charset=UTF-8`        | `Created successfully`                                |
+ | `400`         | `application/json`                | `{"code":"400","message":"Bad Request"}`                            |
+
+</details>
 
 
