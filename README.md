@@ -16,17 +16,17 @@ All API requests require the use of a generated API key.  To authenticate an API
 
 ##### Parameters
 
-> | name      |  type     | description                                                           |
-> |-----------|-----------|-----------------------------------------------------------------|
-> | company_name      |  string |  Required. Name of the company  |
+| name      |  type     | description                                                           |
+ |-----------|-----------|-----------------------------------------------------------------|
+ | company_name      |  string |  Required. Name of the company  |
 
 
 ##### Responses
 
-> | http code     | content-type                      | response                                                            |
-> |---------------|-----------------------------------|---------------------------------------------------------------------|
-> | `201`         | `text/plain;charset=UTF-8`        | `Created successfully`                                |
-> | `400`         | `application/json`                | `{"code":"400","message":"Bad Request"}`                            |
+ | http code     | content-type                      | response                                                            |
+ |---------------|-----------------------------------|---------------------------------------------------------------------|
+ | `201`         | `text/plain;charset=UTF-8`        | `Created successfully`                                |
+ | `400`         | `application/json`                | `{"code":"400","message":"Bad Request"}`                            |
 
 </details>
 
